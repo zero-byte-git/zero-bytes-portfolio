@@ -24,7 +24,7 @@ export default function RootLayout({
         className={`${firaCode.variable} antialiased`}
         cz-shortcut-listen="true"
       >
-        <header className="w-full sticky top-0 z-50 bg-white/70 backdrop-blur px-2">
+        <header className="w-full top-0 z-50 bg-white/70 backdrop-blur px-2">
           <Navbar />
         </header>
         <main className="relative">{children}</main>

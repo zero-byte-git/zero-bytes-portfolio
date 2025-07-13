@@ -1,11 +1,13 @@
-import About from "@/components/sections/About";
+import HowWeWork from "@/components/sections/HowWeWork";
+import Footer from "@/components/sections/Footer";
 import Hero from "@/components/sections/Hero";
 
 export default function Home() {
   return (
     <div>
       <Hero />
-      <About />
+      <HowWeWork />
+      <Footer />
     </div>
   );
 }
