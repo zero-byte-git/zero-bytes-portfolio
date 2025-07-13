@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fira_Code } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/layout/Navbar";
 
 const firaCode = Fira_Code({
   variable: "--font-fira",
@@ -21,8 +22,12 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${firaCode.variable} antialiased`}
+        cz-shortcut-listen="true"
       >
-        {children}
+        <header className="w-full sticky top-0 z-50 bg-white/70 backdrop-blur px-2">
+          <Navbar />
+        </header>
+        <main className="relative">{children}</main>
       </body>
     </html>
   );
