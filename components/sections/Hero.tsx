@@ -22,7 +22,7 @@ interface CodeSnippet {
 
 const Hero: FC = () => {
   const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 700], [1000, 0]);
+  const y = useTransform(scrollY, [-350, 700], [1000, 0]);
   const codeSnippets: CodeSnippet[] = [
     // JavaScript/React
     { code: "const magic = () => {}", delay: 0, position: "top-20 left-10" },
@@ -225,7 +225,7 @@ const Hero: FC = () => {
               initial="hidden"
               animate="visible"
               transition={{ delay: 0.2 } as Transition}
-              className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
+              className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
             >
               We are a passionate team of developers crafting cutting-edge web
               solutions that drive growth, enhance user experience, and bring

@@ -3,6 +3,7 @@
 import { Monitor, Users, Zap, Rocket } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+// import Link from "next/link";
 
 export const workflowSteps = [
   {
@@ -82,8 +83,10 @@ export default function HowWeWork() {
       >
         <div className="absolute inset-0"></div>
         <div className="text-center z-10 max-w-4xl mx-auto">
-          <h1 className="text-6xl font-bold text-white">How We Work</h1>
-          <p className="text-xl md:text-2xl text-gray-500 max-w-4xl mx-auto leading-relaxed">
+          <h1 className="text-6xl font-semibold text-white mb-6">
+            How We Work
+          </h1>
+          <p className="text-lg md:text-xl text-gray-500 max-w-4xl mx-auto leading-relaxed">
             Our proven methodology combines strategic thinking, creative design,
             and technical excellence to deliver exceptional digital experiences.
           </p>
@@ -194,26 +197,20 @@ export default function HowWeWork() {
           </div>
         );
       })}
-
-      {/* CTA Section */}
-      <div className="min-h-screen flex items-center justify-center px-4 relative mb-12">
-        <div className="absolute inset-0 bg-white"></div>
-        <div className="text-center z-10 max-w-4xl mx-auto text-white">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-black">
-            Ready to Start?
+      <div className=" relative min-h-[1200px] flex items-center justify-center px-4 mb-12 bg-gray-100">
+        <div className="text-center z-10 mx-auto">
+          <h2 className="absolute top-50 left-20 text-5xl md:text-[200px] font-extrabold mb-6 text-black tracking-tighter">
+            KICK <span className="text-red-600"> OFF</span>
           </h2>
-          <p className="text-lg md:text-xl text-black mb-12 max-w-2xl mx-auto">
-            Let&apos;s transform your vision into a digital reality. Get in
-            touch and let&apos;s discuss how we can help you succeed.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="bg-black text-white px-8 py-4 rounded-2xl text-lg font-semibold transition-all duration-300 shadow-2xl hover:shadow-purple-500/25 hover:scale-105">
-              Start Your Project
-            </button>
-            <button className="border-2 border-black text-black hover:bg-white hover:text-slate-900 px-14 py-4 rounded-2xl font-semibold transition-all duration-300 backdrop-blur-sm">
-              View Our Work
-            </button>
-          </div>
+          <h2 className="absolute top-110 left-80 text-5xl md:text-[200px] font-extrabold mb-6 text-black tracking-tighter">
+            YOUR JOURNY
+          </h2>
+          <h2 className="absolute top-170 left-60 text-5xl md:text-[200px] font-extrabold mb-6 text-black tracking-tighter">
+            LET&apos;S BUILD
+          </h2>
+          <h2 className="absolute top-230 left-120 text-5xl md:text-[200px] font-[1000] mb-6 text-red-600 tracking-tighter">
+            TOGETHER
+          </h2>
         </div>
       </div>
     </div>
