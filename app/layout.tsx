@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fira_Code } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
+import { Lenis } from "@/lib/lenis";
 
 const firaCode = Fira_Code({
   variable: "--font-fira",
@@ -24,10 +25,14 @@ export default function RootLayout({
         className={`${firaCode.variable} antialiased bg-black px-2`}
         cz-shortcut-listen="true"
       >
-        <header className="w-full top-0 z-50 bg-black backdrop-blur px-2">
-          <Navbar />
-        </header>
-        <main className="relative">{children}</main>
+        <Lenis root>
+          <header className="w-full top-0 z-50 bg-black backdrop-blur px-2">
+            <Navbar />
+          </header>
+          <main id="main-container" data-scroll-container className="relative">
+            {children}
+          </main>
+        </Lenis>
       </body>
     </html>
   );
