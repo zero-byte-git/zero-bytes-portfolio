@@ -95,7 +95,7 @@ export default function HowWeWork() {
         return (
           <div
             key={i}
-            className="flex items-center justify-center sticky top-0 px-4 py-8"
+            className="flex items-center justify-center sticky top-36 px-4 py-8"
           >
             <div
               style={{
