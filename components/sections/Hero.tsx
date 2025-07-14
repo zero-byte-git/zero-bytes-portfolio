@@ -116,7 +116,7 @@ const Hero: FC = () => {
   };
 
   return (
-    <section className="relative min-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden bg-white rounded-2xl">
+    <section className="relative min-h-[calc(100vh-70px)] flex items-center justify-center overflow-hidden bg-white rounded-2xl">
       {/* Background grid pattern */}
       <div className="absolute inset-0 bg-grid-slate-200/20 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]" />
 
@@ -236,7 +236,7 @@ const Hero: FC = () => {
           {/* Terminal-style code block */}
           <motion.div
             style={{ y }} // Bind y position to scroll
-            className="bg-black absolute top-10 -right-150 w-96 mx-auto border border-border rounded-xl p-6 text-left text-sm shadow-lg"
+            className="bg-black absolute top-10 md:right-0 lg:-right-50 xl:-right-150 w-96 mx-auto border border-border rounded-xl p-6 text-left text-sm shadow-lg"
           >
             <div className="flex items-center mb-4">
               <div className="flex space-x-2">

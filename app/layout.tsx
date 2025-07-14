@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fira_Code } from "next/font/google";
+import { Fira_Code, Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import { Lenis } from "@/lib/lenis";
@@ -7,6 +7,12 @@ import { Lenis } from "@/lib/lenis";
 const firaCode = Fira_Code({
   variable: "--font-fira",
   subsets: ["latin"],
+});
+
+const roboto = Roboto({
+  variable: "--font-roboto",
+  subsets: ["latin"],
+  weight: ["400", "700"], // Include common weights
 });
 
 export const metadata: Metadata = {
@@ -22,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${firaCode.variable} antialiased bg-black px-2`}
+        className={`${firaCode.variable} ${roboto.variable} antialiased bg-black px-2`}
         cz-shortcut-listen="true"
       >
         <Lenis root>

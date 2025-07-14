@@ -3,6 +3,7 @@
 import { Monitor, Users, Zap, Rocket } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import BuildTogether from "./BuildTogether";
 // import Link from "next/link";
 
 export const workflowSteps = [
@@ -98,7 +99,7 @@ export default function HowWeWork() {
         return (
           <div
             key={i}
-            className="flex items-center justify-center sticky top-36 px-4 py-8"
+            className="flex items-center justify-center sticky top-0 lg:top-36 px-4 py-8"
           >
             <div
               style={{
@@ -197,21 +198,8 @@ export default function HowWeWork() {
           </div>
         );
       })}
-      <div className=" relative min-h-screen flex items-center justify-center px-4 mb-12 bg-gray-100 rounded-2xl mx-5 teinter">
-        <div className="text-center z-10 mx-auto">
-          <h2 className="absolute top-20 left-20 text-5xl md:text-[200px] font-extrabold mb-6 text-black tracking-tighter">
-            KICK <span className="text-red-600"> OFF</span>
-          </h2>
-          <h2 className="absolute top-70 left-80 text-5xl md:text-[200px] font-extrabold mb-6 text-black tracking-tighter">
-            YOUR JOURNY
-          </h2>
-          <h2 className="absolute top-120 left-120 text-5xl md:text-[200px] font-extrabold mb-6 text-black tracking-tighter">
-            LET&apos;S BUILD
-          </h2>
-          <h2 className="absolute top-170 left-120 text-5xl md:text-[200px] font-[1000] mb-6 text-red-600 tracking-tighter">
-            TOGETHER
-          </h2>
-        </div>
+      <div>
+        <BuildTogether />
       </div>
     </div>
   );
