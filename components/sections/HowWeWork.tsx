@@ -1,4 +1,7 @@
+"use client";
+
 import { Monitor, Users, Zap, Rocket } from "lucide-react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 export const workflowSteps = [
@@ -65,33 +68,41 @@ export const workflowSteps = [
 
 export default function HowWeWork() {
   return (
-    <div className="min-h-screen mt-24">
-      <div className="flex items-center justify-center px-4 relative overflow-hidden">
+    <div className="min-h-screen mt-32">
+      <motion.div
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{
+          duration: 0.8,
+          ease: "easeOut",
+          delay: 0.2,
+        }}
+        viewport={{ once: true, amount: 0.5 }}
+        className="flex items-center justify-center px-4 relative overflow-hidden"
+      >
         <div className="absolute inset-0"></div>
         <div className="text-center z-10 max-w-4xl mx-auto">
-          <h1 className="text-6xl font-bold">
-            How We Work
-          </h1>
+          <h1 className="text-6xl font-bold text-white">How We Work</h1>
           <p className="text-xl md:text-2xl text-gray-500 max-w-4xl mx-auto leading-relaxed">
             Our proven methodology combines strategic thinking, creative design,
             and technical excellence to deliver exceptional digital experiences.
           </p>
         </div>
-      </div>
+      </motion.div>
 
       {/* Workflow Steps */}
       {workflowSteps.map((step, i) => {
         return (
           <div
             key={i}
-            className="min-h-screen flex items-center justify-center sticky top-0 px-4 py-8"
+            className="flex items-center justify-center sticky top-0 px-4 py-8"
           >
             <div
               style={{
                 background: `linear-gradient(135deg, ${step.color}15, ${step.color}25)`,
                 borderColor: step.color + "30",
               }}
-              className="max-w-7xl w-full rounded-3xl shadow-2xl border backdrop-blur-sm overflow-hidden"
+              className="min-h-[600px] max-w-7xl w-full rounded-3xl shadow-2xl border backdrop-blur-sm overflow-hidden mb-48"
             >
               <div className="grid lg:grid-cols-2 gap-0 min-h-[600px]">
                 {/* Left Side - Image and Info */}
@@ -185,26 +196,26 @@ export default function HowWeWork() {
       })}
 
       {/* CTA Section */}
-      {/* <div className="min-h-screen flex items-center justify-center px-4 relative">
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-slate-700"></div>
+      <div className="min-h-screen flex items-center justify-center px-4 relative mb-12">
+        <div className="absolute inset-0 bg-white"></div>
         <div className="text-center z-10 max-w-4xl mx-auto text-white">
-          <h2 className="text-5xl md:text-6xl font-bold mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-black">
             Ready to Start?
           </h2>
-          <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-black mb-12 max-w-2xl mx-auto">
             Let&apos;s transform your vision into a digital reality. Get in
             touch and let&apos;s discuss how we can help you succeed.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-2xl text-lg font-semibold transition-all duration-300 shadow-2xl hover:shadow-purple-500/25 hover:scale-105">
+            <button className="bg-black text-white px-8 py-4 rounded-2xl text-lg font-semibold transition-all duration-300 shadow-2xl hover:shadow-purple-500/25 hover:scale-105">
               Start Your Project
             </button>
-            <button className="border-2 border-white/30 text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-2xl text-lg font-semibold transition-all duration-300 backdrop-blur-sm">
+            <button className="border-2 border-black text-black hover:bg-white hover:text-slate-900 px-14 py-4 rounded-2xl font-semibold transition-all duration-300 backdrop-blur-sm">
               View Our Work
             </button>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }

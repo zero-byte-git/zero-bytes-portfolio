@@ -59,7 +59,7 @@ export default function Navbar() {
   return (
     <div className="max-w-[1440] mx-auto flex items-center justify-between rounded-lg px-4 md:px-8 py-1 md:py-4 backdrop-blur">
       {/* Logo */}
-      <Link href="/" className="md:text-xl text-gray-700 font-bold tracking">
+      <Link href="/" className="md:text-xl text-gray-300 font-bold tracking">
         Zero Bytes
       </Link>
 
@@ -76,7 +76,7 @@ export default function Navbar() {
           >
             <Link
               href={link.href}
-              className="text-sm font-medium hover:text-primary transition text-gray-600 tracking-wider"
+              className="text-sm font-medium hover:text-white transition text-gray-300 tracking-wider"
             >
               {link.label}
             </Link>

@@ -2,7 +2,14 @@
 
 import { ArrowRight, Code, Terminal, Braces } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { motion, AnimatePresence, Variants, Transition } from "framer-motion";
+import {
+  motion,
+  AnimatePresence,
+  Variants,
+  Transition,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 import { FC } from "react";
 import { TypeAnimation } from "react-type-animation";
 
@@ -14,6 +21,8 @@ interface CodeSnippet {
 }
 
 const Hero: FC = () => {
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 700], [1000, 0]);
   const codeSnippets: CodeSnippet[] = [
     // JavaScript/React
     { code: "const magic = () => {}", delay: 0, position: "top-20 left-10" },
@@ -107,7 +116,7 @@ const Hero: FC = () => {
   };
 
   return (
-    <section className="relative min-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden bg-white rounded-2xl">
       {/* Background grid pattern */}
       <div className="absolute inset-0 bg-grid-slate-200/20 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]" />
 
@@ -226,13 +235,8 @@ const Hero: FC = () => {
 
           {/* Terminal-style code block */}
           <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: { opacity: 0, x: 100 },
-              visible: { opacity: 1, x: 0, transition: { duration: 0.6 } },
-            }}
-            className="bg-accent absolute top-10 -right-150 w-96 mx-auto border border-border rounded-xl p-6 text-left text-sm shadow-lg"
+            style={{ y }} // Bind y position to scroll
+            className="bg-black absolute top-10 -right-150 w-96 mx-auto border border-border rounded-xl p-6 text-left text-sm shadow-lg"
           >
             <div className="flex items-center mb-4">
               <div className="flex space-x-2">
@@ -250,30 +254,30 @@ const Hero: FC = () => {
                 speed={1}
                 wrapper="div"
                 cursor={true}
-                className="text-primary"
+                className="text-gray-200"
               />
 
               {/* Other Lines Appear One by One */}
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 2, duration: 0.5 } as Transition}
-                className="text-muted-foreground"
+                transition={{ delay: 2, duration: 0.5 }}
+                className="text-gray-200"
               >
                 ✓ Installing dependencies...
               </motion.div>
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 2.4, duration: 0.5 } as Transition}
-                className="text-muted-foreground"
+                transition={{ delay: 2.4, duration: 0.5 }}
+                className="text-gray-200"
               >
                 ✓ Building your dream project...
               </motion.div>
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 2.8, duration: 0.5 } as Transition}
+                transition={{ delay: 2.8, duration: 0.5 }}
                 className="text-green-500"
               >
                 ✓ Ready to launch! 🚀
@@ -318,8 +322,12 @@ const Hero: FC = () => {
         </div>
       </motion.div>
 
-     <div className="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-16 fill-background">
+      <div className="absolute bottom-0 left-0 right-0">
+        <svg
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          className="w-full h-16 fill-background"
+        >
           <path d="M0,60 C300,120 900,0 1200,60 L1200,120 L0,120 Z" />
         </svg>
       </div>

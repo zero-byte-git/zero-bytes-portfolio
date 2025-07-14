@@ -12,7 +12,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1B202C] text-white px-6 py-10">
+    <footer className="bg-black text-white px-6 py-10">
       <div className="max-w-7xl mx-auto grid md:grid-cols-4 sm:grid-cols-2 gap-10">
         {/* Logo & CTA */}
         <div>

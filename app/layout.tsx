@@ -21,10 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${firaCode.variable} antialiased`}
+        className={`${firaCode.variable} antialiased bg-black px-2`}
         cz-shortcut-listen="true"
       >
-        <header className="w-full top-0 z-50 bg-white/70 backdrop-blur px-2">
+        <header className="w-full top-0 z-50 bg-black backdrop-blur px-2">
           <Navbar />
         </header>
         <main className="relative">{children}</main>
