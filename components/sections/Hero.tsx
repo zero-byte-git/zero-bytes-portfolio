@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, Code, Terminal, Braces } from "lucide-react";
+import { Code, Terminal, Braces } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   motion,
@@ -293,13 +293,9 @@ const Hero: FC = () => {
               initial="hidden"
               animate="visible"
             >
-              <Button
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-              >
+              <Button className="px-10 shadow-2xl">
                 <Code className="mr-2 w-5 h-5" />
                 Start Your Project
-                <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </motion.div>
 
