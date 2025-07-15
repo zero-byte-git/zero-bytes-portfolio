@@ -59,7 +59,7 @@ export default function Navbar() {
   return (
     <div className="max-w-[1440] mx-auto flex items-center justify-between rounded-lg px-4 md:px-8 py-1 md:py-4 backdrop-blur">
       {/* Logo */}
-      <Link href="/" className="md:text-xl text-gray-300 font-bold tracking">
+      <Link href="/" className="md:text-xl text-teal-600 font-bold tracking">
         Zero Bytes
       </Link>
 

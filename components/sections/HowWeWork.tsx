@@ -1,72 +1,8 @@
 "use client";
 
-import { Monitor, Users, Zap, Rocket } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import BuildTogether from "./BuildTogether";
-// import Link from "next/link";
-
-export const workflowSteps = [
-  {
-    title: "Discovery & Strategy",
-    description:
-      "We start by understanding your business goals, target audience, and technical requirements. Through collaborative workshops and research, we define the project scope and create a roadmap that aligns with your vision.",
-    phase: "Phase 01",
-    duration: "1-2 weeks",
-    deliverables: [
-      "Project Brief",
-      "User Personas",
-      "Technical Specs",
-      "Timeline",
-    ],
-    image: "photo-1605810230434-7631ac76ec81",
-    color: "#667eea",
-    icon: Users,
-  },
-  {
-    title: "Design & Prototyping",
-    description:
-      "Our design team creates intuitive user experiences with modern aesthetics. We develop wireframes, interactive prototypes, and comprehensive design systems that ensure consistency across all touchpoints.",
-    phase: "Phase 02",
-    duration: "2-3 weeks",
-    deliverables: ["Wireframes", "UI/UX Design", "Prototype", "Design System"],
-    image: "photo-1461749280684-dccba630e2f6",
-    color: "#f093fb",
-    icon: Monitor,
-  },
-  {
-    title: "Development & Testing",
-    description:
-      "Using cutting-edge technologies like React, TypeScript, and modern frameworks, we build scalable, performant applications. Rigorous testing ensures quality and reliability at every stage.",
-    phase: "Phase 03",
-    duration: "4-8 weeks",
-    deliverables: [
-      "Clean Code",
-      "API Integration",
-      "Testing Suite",
-      "Documentation",
-    ],
-    image: "photo-1498050108023-c5249f4df085",
-    color: "#20bf6b",
-    icon: Zap,
-  },
-  {
-    title: "Launch & Support",
-    description:
-      "We handle deployment, optimization, and provide ongoing support to ensure your application performs flawlessly. Our partnership continues with maintenance, updates, and feature enhancements.",
-    phase: "Phase 04",
-    duration: "Ongoing",
-    deliverables: [
-      "Live Deployment",
-      "Performance Optimization",
-      "Training",
-      "Support",
-    ],
-    image: "photo-1488590528505-98d2b5aba04b",
-    color: "#fa8231",
-    icon: Rocket,
-  },
-];
+import { workflowSteps } from "../data";
 
 export default function HowWeWork() {
   return (
@@ -198,8 +134,24 @@ export default function HowWeWork() {
           </div>
         );
       })}
-      <div>
-        <BuildTogether />
+      <div className="relative min-h-screen flex items-center justify-center px-4 mb-12 bg-gray-100 rounded-2xl mx-4">
+        <div className="font-roboto text-center z-10 mx-auto static top-0">
+          <h2 className="absolute top-20 left-8 text-4xl sm:text-5xl md:text-9xl lg:text-[180px] font-bold mb-4 text-black tracking-tighter">
+            KICK <span className="text-red-600">OFF</span>
+          </h2>
+
+          <h2 className="absolute top-20 sm:top-28 md:top-32 lg:top-[260px] left-8 sm:left-16 md:left-50 text-4xl sm:text-5xl md:text-9xl lg:text-[180px] font-bold mb-4 text-black tracking-tighter">
+            YOUR JOURNEY
+          </h2>
+
+          <h2 className="absolute top-40 sm:top-48 md:top-56 lg:top-[460px] left-8 sm:left-20 md:left-70 lg:left-120 text-4xl sm:text-5xl md:text-9xl lg:text-[180px] font-bold mb-4 text-black tracking-tighter">
+            LET&apos;S BUILD
+          </h2>
+
+          <h2 className="absolute top-56 sm:top-64 md:top-80 lg:top-[660px] left-8 sm:left-20 md:left-24 lg:left-200 text-4xl sm:text-5xl md:text-9xl lg:text-[180px] font-bold mb-4 text-red-600 tracking-tighter">
+            TOGETHER
+          </h2>
+        </div>
       </div>
     </div>
   );
