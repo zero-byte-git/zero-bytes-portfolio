@@ -11,7 +11,7 @@ interface ProjectPhase {
   icon: LucideIcon;
 }
 
-export const workflowSteps:ProjectPhase[] = [
+export const workflowSteps: ProjectPhase[] = [
   {
     title: "Discovery & Strategy",
     description:
@@ -73,14 +73,12 @@ export const workflowSteps:ProjectPhase[] = [
   },
 ];
 
-
 interface ProjectsInfo {
-        title: string;
-        description: string;
+  title: string;
+  description: string;
 }
 
-
-export const projects:ProjectsInfo[] = [
+export const projects: ProjectsInfo[] = [
   {
     title: "Bishwasto",
     description:
@@ -112,8 +110,6 @@ export const projects:ProjectsInfo[] = [
       "Ready-to-implement authentication system that can be integrated into enterprise applications for secure user management.",
   },
 ];
-
-
 
 type CardType = {
   url: string;

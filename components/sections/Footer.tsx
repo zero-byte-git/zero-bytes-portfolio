@@ -80,7 +80,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-gray-700 mt-10 pt-6 text-sm text-gray-400 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div className="border-t border-white mt-10 pt-6 text-sm text-gray-400 flex flex-col md:flex-row justify-between items-center gap-4">
         <div className="space-x-4">
           <Link href="#">Terms of Service</Link>
           <Link href="#">Privacy Policy</Link>
