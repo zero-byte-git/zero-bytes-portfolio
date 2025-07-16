@@ -32,7 +32,7 @@ export default function Example() {
               key={index}
               className="w-screen flex justify-center items-center"
             >
-              <div className="w-[90%] lg:w-[70%] bg-white xl:h-[600px] rounded-2xl p-5 shadow-xl">
+              <div className="w-[90%] lg:w-[70%] bg-white md:h-[400px] lg:h-[600px] xl:h-[700px] rounded-2xl p-5 shadow-xl">
                 <h2 className="text-4xl font-bold mb-4">{project.title}</h2>
                 <p className="text-lg text-gray-600">{project.description}</p>
               </div>
