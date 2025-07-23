@@ -75,10 +75,10 @@ export default function Example() {
 
                   {/* Buttons */}
                   <div className="flex gap-4">
-                    <Button className="relative bg-teal-600 hover:bg-teal-600 text-white font-bold px-6 flex items-center justify-center shadow-[4px_4px_0px_0px_#000] hover:shadow-[8px_8px_0px_0px_#000] transition-all duration-200 rounded-none">
+                    <Button className="relative bg-teal-600 hover:bg-teal-600 text-white font-bold px-6 flex items-center justify-center shadow-[4px_4px_0px_0px_#000] tracking-widest hover:shadow-[8px_8px_0px_0px_#000] transition-all duration-200 rounded-none">
                       View Demo
                     </Button>
-                    <Button className="relative bg-neutral-900 text-white font-bold px-6 flex items-center justify-center shadow-[4px_4px_0px_0px_#00897B] hover:shadow-[8px_8px_0px_0px_#00897B] transition-all duration-200 rounded-none">
+                    <Button className="relative bg-neutral-900 hover:bg-neutral-900 text-white font-bold px-6 flex items-center justify-center shadow-[4px_4px_0px_0px_#00897B] hover:shadow-[8px_8px_0px_0px_#00897B] transition-all duration-200 rounded-none tracking-widest">
                       Souce Code
                     </Button>
                   </div>

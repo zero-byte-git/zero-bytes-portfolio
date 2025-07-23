@@ -19,7 +19,7 @@ export default function Testimonial() {
   const y2 = useTransform(scrollYProgress, [0, 1], [0, height * 1.1]);
   const y3 = useTransform(scrollYProgress, [0, 1], [0, height * 0.9]);
   const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 1.2]);
-  const y5 = useTransform(scrollYProgress, [0, 1], [0, height * 1]);
+  // const y5 = useTransform(scrollYProgress, [0, 1], [0, height * 1]);
 
   const testimonialCard = (
     quote: string,
@@ -63,7 +63,7 @@ export default function Testimonial() {
 
       <div
         ref={container}
-        className="max-w-[1536px] mx-auto relative grid grid-cols-5 h-[175vh] gap-5 overflow-hidden"
+        className="max-w-[1280px] mx-auto relative grid grid-cols-4 h-[175vh] gap-5 overflow-hidden"
       >
         {/* Column 1 */}
         <motion.div className="col-span-1 flex flex-col gap-5" style={{ y: y1 }}>
@@ -130,7 +130,7 @@ export default function Testimonial() {
         </motion.div>
 
         {/* Column 5 */}
-        <motion.div className="col-span-1 flex flex-col gap-5" style={{ y: y5 }}>
+        {/* <motion.div className="col-span-1 flex flex-col gap-5" style={{ y: y5 }}>
           {testimonialCard(
             "Their innovative approach to web development gave us a competitive edge in our industry.",
             "Laura Bennett",
@@ -143,7 +143,7 @@ export default function Testimonial() {
             "VP, GrowthMinds",
             "https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-6.png"
           )}
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );

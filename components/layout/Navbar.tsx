@@ -57,10 +57,12 @@ export default function Navbar() {
   };
 
   return (
-    <div className="max-w-[1440] mx-auto flex items-center justify-between rounded-lg px-4 md:px-8 py-1 md:py-4 backdrop-blur">
+    <div className="max-w-[1280px] bg-white mx-auto flex items-center justify-between rounded-lg px-4 md:px-8 py-1 md:py-4 backdrop-blur mt-5">
       {/* Logo */}
-      <Link href="/" className="md:text-xl text-teal-600 font-bold tracking">
-        Zero Bytes
+      <Link href="/">
+        {/* <div className="md:text-2xl text-concert text-white font-bold h-8 w-8 flex items-center justify-center rounded-full bg-black rotate-30"> */}
+        <p className="text-lg text-concert font-bold">zero Byte</p>
+        {/* </div> */}
       </Link>
 
       {/* Desktop Nav */}
@@ -76,7 +78,7 @@ export default function Navbar() {
           >
             <Link
               href={link.href}
-              className="text-sm font-medium hover:text-white transition text-gray-300 tracking-wider"
+              className="text-sm font-medium hover:text-black transition text-gray-800 tracking-wider"
             >
               {link.label}
             </Link>

@@ -122,9 +122,12 @@
 /* globals.css */
 .font-roboto {
   font-family: var(--font-roboto);
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: white;
+  /* font-size: 2.5rem;
+  font-weight: 700; */
+}
+.font-concert {
+  font-family: var(--font-concert);
+  /* font-weight: 100; */
 }
 
 /* body::-webkit-scrollbar {
