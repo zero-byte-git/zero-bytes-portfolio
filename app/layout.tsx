@@ -3,6 +3,7 @@ import { Concert_One } from "next/font/google"; //Fira_Code, Roboto
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import { Lenis } from "@/lib/lenis";
+import { Toaster } from "sonner";
 
 // const firaCode = Fira_Code({
 //   variable: "--font-fira",
@@ -34,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${concert.variable} font-sans antialiased bg-black`} //${firaCode.variable} ${roboto.variable} 
+        className={`${concert.variable} font-sans antialiased bg-black`} //${firaCode.variable} ${roboto.variable}
         cz-shortcut-listen="true"
       >
         <Lenis root>
@@ -48,6 +49,7 @@ export default function RootLayout({
           >
             {children}
           </main>
+          <Toaster position="top-right"/>
         </Lenis>
       </body>
     </html>
