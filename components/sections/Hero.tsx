@@ -32,17 +32,22 @@ export default function CrazyEggHero() {
 
     try {
       await emailjs.send(
-        "service_xby961m", // Your Service ID
-        "template_we8mzqw", // Your Template ID
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
         {
-          user_email: email,
           user_name: name,
+          user_email: email,
           website_url: website,
         },
-        "qlHYffPpCSMZVlD6e" // Your Public Key
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       );
       setMessage("Email sent successfully!");
       toast.success(message);
+      console.log({
+        user_name: name,
+        user_email: email,
+        website_url: website,
+      });
       setFormData({ email: "", name: "", website: "" });
     } catch (error) {
       console.error(error);
