@@ -43,11 +43,6 @@ export default function CrazyEggHero() {
       );
       setMessage("Email sent successfully!");
       toast.success(message);
-      console.log({
-        user_name: name,
-        user_email: email,
-        website_url: website,
-      });
       setFormData({ email: "", name: "", website: "" });
     } catch (error) {
       console.error(error);
@@ -70,7 +65,7 @@ export default function CrazyEggHero() {
           <div className="max-w-xl bg-[#121212] text-gray-100 p-6 rounded-lg shadow-md">
             <p className="mb-4 text-lg">
               Over{" "}
-              <span className="font-bold">400,000 websites use Crazy Egg</span>{" "}
+              <span className="font-bold">400 websites use Zero Byte</span>{" "}
               to fix their website.
             </p>
 
