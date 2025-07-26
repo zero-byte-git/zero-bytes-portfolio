@@ -54,10 +54,10 @@ export default function CrazyEggHero() {
   };
 
   return (
-    <section className="container mx-auto min-h-[calc(100vh-120px)] flex items-center justify-center px-4">
+    <section className="container mx-auto min-h-[calc(100vh-120px)] flex items-center justify-center px-4 mt-12 sm:mt-0">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center justify-center">
         <div>
-          <h1 className="text-4xl text-gray-200 font-concert font-thin md:text-6xl mb-10 tracking-wider">
+          <h1 className="text-4xl text-gray-200 font-concert font-bold md:text-6xl mb-10 tracking-wider">
             See what&apos;s wrong <br className="hidden md:block" />
             with your website.
           </h1>
