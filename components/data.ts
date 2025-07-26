@@ -1,75 +1,360 @@
-import { Monitor, Users, Zap, Rocket, LucideIcon } from "lucide-react";
+import {
+  Code,
+  Workflow as Wordpress,
+  ShoppingBag,
+  Search,
+  Palette,
+  Layers,
+  FileText,
+  Smartphone,
+  Layout,
+  Globe,
+  Server,
+  Users,
+  LucideIcon,
+  Zap,
+  Gauge,
+  BarChart,
+  Settings,
+  PieChart,
+} from "lucide-react";
 
-interface ProjectPhase {
+type Service = {
   title: string;
-  description: string;
   phase: string;
   duration: string;
-  deliverables: string[];
+  description: React.ReactNode;
+  deliverables: React.ReactNode[];
   image: string;
   color: string;
   icon: LucideIcon;
-}
+  categories: {
+    name: string;
+    icon: LucideIcon;
+    items: React.ReactNode[];
+  }[];
+};
 
-export const workflowSteps: ProjectPhase[] = [
+export const services: Service[] = [
   {
-    title: "Discovery & Strategy",
+    title: "Custom Website Development",
+    phase: "Web Solutions",
+    duration: "4-8 Weeks",
     description:
-      "We start by understanding your business goals, target audience, and technical requirements. Through collaborative workshops and research, we define the project scope and create a roadmap that aligns with your vision.",
-    phase: "Phase 01",
-    duration: "1-2 weeks",
+      "Tailored web solutions built from scratch to meet your unique business requirements and brand identity.",
     deliverables: [
       "Project Brief",
-      "User Personas",
       "Technical Specs",
+      "User Research",
       "Timeline",
-    ],
-    image: "photo-1605810230434-7631ac76ec81",
-    color: "#667eea",
-    icon: Users,
-  },
-  {
-    title: "Design & Prototyping",
-    description:
-      "Our design team creates intuitive user experiences with modern aesthetics. We develop wireframes, interactive prototypes, and comprehensive design systems that ensure consistency across all touchpoints.",
-    phase: "Phase 02",
-    duration: "2-3 weeks",
-    deliverables: ["Wireframes", "UI/UX Design", "Prototype", "Design System"],
-    image: "photo-1461749280684-dccba630e2f6",
-    color: "#f093fb",
-    icon: Monitor,
-  },
-  {
-    title: "Development & Testing",
-    description:
-      "Using cutting-edge technologies like React, TypeScript, and modern frameworks, we build scalable, performant applications. Rigorous testing ensures quality and reliability at every stage.",
-    phase: "Phase 03",
-    duration: "4-8 weeks",
-    deliverables: [
-      "Clean Code",
-      "API Integration",
-      "Testing Suite",
-      "Documentation",
-    ],
-    image: "photo-1498050108023-c5249f4df085",
-    color: "#20bf6b",
-    icon: Zap,
-  },
-  {
-    title: "Launch & Support",
-    description:
-      "We handle deployment, optimization, and provide ongoing support to ensure your application performs flawlessly. Our partnership continues with maintenance, updates, and feature enhancements.",
-    phase: "Phase 04",
-    duration: "Ongoing",
-    deliverables: [
-      "Live Deployment",
+      "Responsive Design",
+      "Modern UI/UX",
       "Performance Optimization",
-      "Training",
-      "Support",
     ],
-    image: "photo-1488590528505-98d2b5aba04b",
-    color: "#fa8231",
-    icon: Rocket,
+    image: "photo-1516321318423-f06f85e504b3",
+    color: "#3B82F6",
+    icon: Code,
+    categories: [
+      {
+        name: "Discovery & Strategy",
+        icon: Search,
+        items: [
+          "Project Brief",
+          "Technical Specs",
+          "User Research",
+          "Timeline",
+        ],
+      },
+      {
+        name: "Design & Development",
+        icon: Palette,
+        items: [
+          "Responsive Design",
+          "Modern UI/UX",
+          "Performance Optimization",
+        ],
+      },
+    ],
+  },
+  {
+    title: "WordPress Development",
+    phase: "CMS Solutions",
+    duration: "3-6 Weeks",
+    description:
+      "Powerful WordPress solutions with custom themes, plugins, and seamless content management systems.",
+    deliverables: [
+      "Custom Themes",
+      "Plugin Development",
+      "SEO Optimization",
+      "Security",
+      "Multi-site Setup",
+      "E-commerce Integration",
+      "Performance Tuning",
+    ],
+    image: "photo-1516321318423-f06f85e504b3",
+    color: "#10B981",
+    icon: Wordpress,
+    categories: [
+      {
+        name: "Content Strategy",
+        icon: Users,
+        items: [
+          "Custom Themes",
+          "Plugin Development",
+          "SEO Optimization",
+          "Security",
+        ],
+      },
+      {
+        name: "Advanced Features",
+        icon: Layers,
+        items: [
+          "Multi-site Setup",
+          "E-commerce Integration",
+          "Performance Tuning",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Shopify Theme Development",
+    phase: "E-commerce",
+    duration: "4-7 Weeks",
+    description:
+      "Custom Shopify themes that convert visitors into customers with optimized user experience and functionality.",
+    deliverables: [
+      "Custom Liquid Code",
+      "Conversion Optimization",
+      "App Integration",
+      "Analytics Setup",
+      "Mobile Optimization",
+      "Fast Loading",
+      "Payment Integration",
+    ],
+    image: "photo-1516321318423-f06f85e504b3",
+    color: "#F59E0B",
+    icon: ShoppingBag,
+    categories: [
+      {
+        name: "E-commerce Strategy",
+        icon: FileText,
+        items: [
+          "Custom Liquid Code",
+          "Conversion Optimization",
+          "App Integration",
+          "Analytics Setup",
+        ],
+      },
+      {
+        name: "Mobile Commerce",
+        icon: Smartphone,
+        items: [
+          "Mobile Optimization",
+          "Fast Loading",
+          "Payment Integration",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Wix Development",
+    phase: "No-Code Solutions",
+    duration: "2-5 Weeks",
+    description:
+      "Rapidly built, user-friendly websites using Wix’s drag-and-drop platform, enhanced with custom apps and AI-driven design for small businesses and portfolios.",
+    deliverables: [
+      "Custom Templates",
+      "Wix App Market Integration",
+      "SEO Tools",
+      "Mobile Optimization",
+      "E-commerce Features",
+      "Booking Systems",
+      "AI Design Assistance",
+    ],
+    image: "photo-1516321318423-f06f85e504b3",
+    color: "#8B5CF6",
+    icon: Layout,
+    categories: [
+      {
+        name: "Rapid Setup",
+        icon: FileText,
+        items: [
+          "Custom Templates",
+          "Wix App Market Integration",
+          "AI Design Assistance",
+        ],
+      },
+      {
+        name: "Business Features",
+        icon: Smartphone,
+        items: [
+          "SEO Tools",
+          "Mobile Optimization",
+          "E-commerce Features",
+          "Booking Systems",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Webflow Development",
+    phase: "Advanced Design",
+    duration: "4-8 Weeks",
+    description:
+      "Highly customized, responsive websites built with Webflow’s visual code editor, offering pixel-perfect design and advanced animations for professional-grade sites.",
+    deliverables: [
+      "Custom Design Systems",
+      "Responsive Layouts",
+      "Advanced Animations",
+      "CMS Integration",
+      "SEO Optimization",
+      "Third-Party Integrations",
+      "Code Export",
+    ],
+    image: "photo-1516321318423-f06f85e504b3",
+    color: "#EC4899",
+    icon: Globe,
+    categories: [
+      {
+        name: "Design Control",
+        icon: Palette,
+        items: [
+          "Custom Design Systems",
+          "Responsive Layouts",
+          "Advanced Animations",
+        ],
+      },
+      {
+        name: "Technical Features",
+        icon: Code,
+        items: [
+          "CMS Integration",
+          "SEO Optimization",
+          "Third-Party Integrations",
+          "Code Export",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Headless CMS Development",
+    phase: "Modern Web Architecture",
+    duration: "5-9 Weeks",
+    description:
+      "Scalable headless CMS solutions using platforms like Strapi, Sanity, or Contentful, paired with modern frontends for flexible, high-performance websites.",
+    deliverables: [
+      "API-Driven Architecture",
+      "Custom Frontend Integration",
+      "Content Modeling",
+      "Scalability Optimization",
+      "SEO Configuration",
+      "Third-Party API Integration",
+      "Performance Enhancements",
+    ],
+    image: "photo-1516321318423-f06f85e504b3",
+    color: "#6B7280",
+    icon: Server,
+    categories: [
+      {
+        name: "Content Architecture",
+        icon: FileText,
+        items: [
+          "API-Driven Architecture",
+          "Content Modeling",
+          "SEO Configuration",
+        ],
+      },
+      {
+        name: "Frontend Integration",
+        icon: Code,
+        items: [
+          "Custom Frontend Integration",
+          "Scalability Optimization",
+          "Third-Party API Integration",
+          "Performance Enhancements",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Website Analytics",
+    phase: "Performance Tracking",
+    duration: "2-4 Weeks",
+    description:
+      "Comprehensive analytics setup to track user behavior, monitor performance, and drive data-informed decisions for your website.",
+    deliverables: [
+      "Analytics Platform Setup",
+      "Custom Dashboards",
+      "Event Tracking",
+      "Conversion Tracking",
+      "User Behavior Analysis",
+      "A/B Testing Setup",
+      "Data Visualization",
+    ],
+    image: "photo-1516321318423-f06f85e504b3",
+    color: "#6366F1",
+    icon: BarChart,
+    categories: [
+      {
+        name: "Analytics Configuration",
+        icon: Settings,
+        items: [
+          "Analytics Platform Setup",
+          "Custom Dashboards",
+          "Event Tracking",
+          "Conversion Tracking",
+        ],
+      },
+      {
+        name: "Data Insights",
+        icon: PieChart,
+        items: [
+          "User Behavior Analysis",
+          "A/B Testing Setup",
+          "Data Visualization",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Website Optimization",
+    phase: "Performance Enhancement",
+    duration: "3-6 Weeks",
+    description:
+      "Targeted optimization strategies to improve website speed, user experience, and search engine rankings for maximum impact.",
+    deliverables: [
+      "Site Speed Optimization",
+      "SEO Enhancements",
+      "Image Compression",
+      "Code Minification",
+      "Accessibility Improvements",
+      "Mobile Responsiveness",
+      "Caching Strategies",
+    ],
+    image: "photo-1516321318423-f06f85e504b3",
+    color: "#F97316",
+    icon: Zap,
+    categories: [
+      {
+        name: "Performance Tuning",
+        icon: Gauge,
+        items: [
+          "Site Speed Optimization",
+          "Image Compression",
+          "Code Minification",
+          "Caching Strategies",
+        ],
+      },
+      {
+        name: "User Experience",
+        icon: Users,
+        items: [
+          "SEO Enhancements",
+          "Accessibility Improvements",
+          "Mobile Responsiveness",
+        ],
+      },
+    ],
   },
 ];
 
