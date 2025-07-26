@@ -19,7 +19,6 @@ export default function Testimonial() {
   const y2 = useTransform(scrollYProgress, [0, 1], [0, height * 1.1]);
   const y3 = useTransform(scrollYProgress, [0, 1], [0, height * 0.9]);
   const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 1.2]);
-  // const y5 = useTransform(scrollYProgress, [0, 1], [0, height * 1]);
 
   const testimonialCard = (
     quote: string,

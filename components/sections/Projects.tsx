@@ -67,7 +67,7 @@ export default function Example() {
                     {project.description}
                   </p>
 
-                  {/* Additional Text - Tech Stack */}
+                  {/* Additional Text */}
                   <p className="mb-6 text-md text-gray-600">
                     <strong>Tech Stack:</strong> React, Next.js, TypeScript,
                     Tailwind CSS, Node.js, Express, MongoDB
