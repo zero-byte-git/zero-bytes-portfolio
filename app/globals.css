@@ -119,6 +119,7 @@
     @apply bg-background text-foreground;
   }
 }
+
 /* globals.css */
 /* .font-roboto {
   font-family: var(--font-roboto); */
@@ -130,6 +131,6 @@
   /* font-weight: 100; */
 /* } */
 
-/* body::-webkit-scrollbar {
+body::-webkit-scrollbar {
   display: none;
-} */
+}
