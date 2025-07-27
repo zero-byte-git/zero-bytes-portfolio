@@ -1,5 +1,4 @@
 import Services from "@/components/sections/Services";
-import Footer from "@/components/sections/Footer";
 import Hero from "@/components/sections/Hero";
 import Projects from "@/components/sections/Projects";
 import Testimonial from "@/components/sections/Testimonial";
@@ -11,7 +10,6 @@ export default function Home() {
       <Services />
       <Projects />
       <Testimonial />
-      <Footer />
     </div>
   );
 }

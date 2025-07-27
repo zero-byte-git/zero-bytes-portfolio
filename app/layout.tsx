@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import { Lenis } from "@/lib/lenis";
 import { Toaster } from "sonner";
+import Footer from "@/components/sections/Footer";
 
 // const firaCode = Fira_Code({
 //   variable: "--font-fira",
@@ -49,6 +50,9 @@ export default function RootLayout({
           >
             {children}
           </main>
+          <footer>
+            <Footer />
+          </footer>
           <Toaster position="top-right"/>
         </Lenis>
       </body>
