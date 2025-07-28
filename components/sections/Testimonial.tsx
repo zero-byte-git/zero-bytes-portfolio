@@ -45,10 +45,7 @@ export default function Testimonial() {
       </p>
       <div className="flex gap-5 items-center">
         <Avatar>
-          <AvatarImage
-            src={avatar}
-            className="rounded-full w-16 mx-auto"
-          />
+          <AvatarImage src={avatar} className="rounded-full w-16 mx-auto" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
         <div className="mt-4">
@@ -139,12 +136,19 @@ export default function Testimonial() {
         }`}
       >
         {isMobile ? (
-          testimonials.map((t, i) => (
-            <div key={i}>{testimonialCard(t.quote, t.name, t.role, t.avatar)}</div>
-          ))
+          testimonials
+            .slice(0, 4)
+            .map((t, i) => (
+              <div key={i}>
+                {testimonialCard(t.quote, t.name, t.role, t.avatar)}
+              </div>
+            ))
         ) : (
           <>
-            <motion.div className="col-span-1 flex flex-col gap-5" style={{ y: y1 }}>
+            <motion.div
+              className="col-span-1 flex flex-col gap-5"
+              style={{ y: y1 }}
+            >
               {testimonialCard(
                 testimonials[0].quote,
                 testimonials[0].name,
@@ -158,7 +162,10 @@ export default function Testimonial() {
                 testimonials[1].avatar
               )}
             </motion.div>
-            <motion.div className="col-span-1 flex flex-col gap-5" style={{ y: y2 }}>
+            <motion.div
+              className="col-span-1 flex flex-col gap-5"
+              style={{ y: y2 }}
+            >
               {testimonialCard(
                 testimonials[2].quote,
                 testimonials[2].name,
@@ -172,7 +179,10 @@ export default function Testimonial() {
                 testimonials[3].avatar
               )}
             </motion.div>
-            <motion.div className="col-span-1 flex flex-col gap-5" style={{ y: y3 }}>
+            <motion.div
+              className="col-span-1 flex flex-col gap-5"
+              style={{ y: y3 }}
+            >
               {testimonialCard(
                 testimonials[4].quote,
                 testimonials[4].name,
@@ -186,7 +196,10 @@ export default function Testimonial() {
                 testimonials[5].avatar
               )}
             </motion.div>
-            <motion.div className="col-span-1 flex flex-col gap-5" style={{ y: y4 }}>
+            <motion.div
+              className="col-span-1 flex flex-col gap-5"
+              style={{ y: y4 }}
+            >
               {testimonialCard(
                 testimonials[6].quote,
                 testimonials[6].name,
