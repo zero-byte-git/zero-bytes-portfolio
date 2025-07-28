@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Concert_One } from "next/font/google"; //Fira_Code, Roboto
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
-import { Lenis } from "@/lib/lenis";
+import LenisProvider from "@/lib/lenis";
 import { Toaster } from "sonner";
 import Footer from "@/components/sections/Footer";
 
@@ -39,7 +39,7 @@ export default function RootLayout({
         className={`${concert.variable} font-sans antialiased bg-black`} //${firaCode.variable} ${roboto.variable}
         cz-shortcut-listen="true"
       >
-        <Lenis root>
+        <LenisProvider>
           <header className="w-full top-0 z-50 bg-black backdrop-blur px-2">
             <Navbar />
           </header>
@@ -54,7 +54,7 @@ export default function RootLayout({
             <Footer />
           </footer>
           <Toaster position="top-right"/>
-        </Lenis>
+        </LenisProvider>
       </body>
     </html>
   );
