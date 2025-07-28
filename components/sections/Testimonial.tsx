@@ -14,9 +14,9 @@ export default function Testimonial() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768); // tailwind md breakpoint
+      setIsMobile(window.innerWidth < 768);
     };
-    handleResize(); // set initially
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
