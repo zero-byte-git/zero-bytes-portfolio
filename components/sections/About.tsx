@@ -12,36 +12,6 @@ import {
   Twitter,
 } from "lucide-react";
 import Image from "next/image";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "About Us | Zero Byte",
-  description: "Building Solutions that Shape Tomorrow",
-  openGraph: {
-    title: "About Us | Zero Byte",
-    description:
-      "Learn about Zero Byte's mission, team, and values in building innovative web solutions.",
-    url: "/about",
-    type: "website",
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
-        width: 300,
-        height: 300,
-        alt: "Zero Byte Team",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "About Us | Zero Byte",
-    description:
-      "Learn about Zero Byte's mission, team, and values in building innovative web solutions.",
-    images: [
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
-    ],
-  },
-};
 
 const About = () => {
   const teamMembers = [
@@ -194,9 +164,7 @@ const About = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold mb-4 text-gray-200">
-              Our Values
-            </h2>
+            <h2 className="text-5xl font-bold mb-4 text-gray-200">Our Values</h2>
             <p className="text-xl text-gray-400">
               The principles that guide everything we do
             </p>
@@ -219,9 +187,7 @@ const About = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-gray-200">
-              Meet Our Team
-            </h2>
+            <h2 className="text-4xl font-bold mb-4 text-gray-200">Meet Our Team</h2>
             <p className="text-xl text-gray-400">
               The talented individuals behind our success
             </p>
@@ -269,28 +235,6 @@ const About = () => {
                 </div>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-20 bg-primary/10">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6 text-gray-200">
-            Ready to Start Your Project?
-          </h2>
-          <p className="text-xl text-gray-400 mb-8">
-            Let&apos;s discuss how we can bring your vision to life with
-            cutting-edge web development.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="group">
-              Get Started Today
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button size="lg" variant="outline">
-              View Our Work
-            </Button>
           </div>
         </div>
       </section>

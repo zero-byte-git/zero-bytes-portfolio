@@ -101,7 +101,7 @@ export default function CrazyEggHero() {
                 <Button
                   onClick={handleSubmit}
                   disabled={isSending}
-                  className="col-span-1 sm:w-auto bg-[#578E7E] hover:bg-teal-700 text-gray-100 rounded-md px-4 py-2"
+                  className="col-span-1 sm:w-auto bg-teal-700 hover:bg-teal-800 text-gray-100 rounded-md px-4 py-2"
                 >
                   {isSending ? "Sending..." : "Continue →"}
                 </Button>

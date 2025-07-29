@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Menu } from "lucide-react";
+import { ArrowRightFromLine, Menu } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -20,10 +20,9 @@ interface NavLink {
 }
 
 const navLinks: NavLink[] = [
-  { href: "/", label: "Home" },
+  { href: "/", label: "Portfolio" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
-  { href: "/portfolio", label: "Portfolio" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -103,6 +102,15 @@ export default function Navbar() {
               exit="exit"
             >
               <DrawerTitle></DrawerTitle>
+              <DrawerClose asChild>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="absolute top-4 right-4 bg-black rounded-full text-white"
+                >
+                  <ArrowRightFromLine />
+                </Button>
+              </DrawerClose>
               <div className="p-6 flex flex-col space-y-4">
                 {navLinks.map((link, index) => (
                   <motion.div

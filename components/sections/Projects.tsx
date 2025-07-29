@@ -15,11 +15,11 @@ export default function Example() {
 
   return (
     <section ref={targetRef} className="relative h-[300vh]">
-      <div className="text-center z-10 max-w-4xl mx-auto xl:mt-56 xl:-mb-24">
-        <h1 className="text-6xl font-semibold text-white mb-6">
+      <div className="text-center z-10 max-w-4xl mx-auto mt-12 sm:mt-24 lg:mt-40 xl:mt-56 sm:mb-12 lg:mb-16 xl:-mb-24 px-4 sm:px-6 lg:px-8">
+        <h1 className="text-4xl lg:text-6xl font-semibold text-white mb-4 sm:mb-5 lg:mb-6">
           Our Featured Projects
         </h1>
-        <p className="text-lg md:text-xl text-gray-500 max-w-4xl mx-auto leading-relaxed">
+        <p className="text-base sm:text-lg lg:text-xl text-gray-500 max-w-4xl mx-auto leading-relaxed">
           Explore our portfolio of successful projects across various
           industries, showcasing our expertise and innovative approach.
         </p>
