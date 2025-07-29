@@ -7,7 +7,6 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 
-// Define interface for form data
 interface FormData {
   name: string;
   email: string;
@@ -29,9 +28,7 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Add form submission logic here (e.g., API call to handle form data)
     console.log('Form submitted:', formData);
-    // Reset form after submission
     setFormData({ name: '', email: '', subject: '', message: '' });
   };
 
